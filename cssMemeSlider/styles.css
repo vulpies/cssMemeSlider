@@ -258,3 +258,20 @@ input[id="slide5"]:checked
     > span {
     border-color: green;
 }
+
+@media screen and (max-width: 768px) {
+    .slider__memes {
+        height: auto;
+        max-height: 50rem;
+        margin-bottom: 1rem;
+    }
+
+    .slider__texts-wrapper {
+        margin-top: 1rem;
+    }
+
+    .slider__bottom {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
