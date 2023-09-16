@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #fee9be7d;
+    background-color: #f0eadd97;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,11 +15,246 @@ body {
 }
 
 img {
-    display: block;
     width: 100%;
     height: auto;
 }
 
 input[name="radio-btn"] {
     display: none;
+}
+
+.slider__wrapper {
+    max-width: 70rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.slider__memes {
+    display: flex;
+    width: 100%;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    height: 35rem;
+}
+
+.slider__memes-wrapper {
+    display: flex;
+    max-width: 90rem;
+    transform: translateX(0);
+    transition: all 1.2s ease-out;
+}
+
+.slides {
+    flex-shrink: 0;
+    width: 100%;
+    border-radius: 1.5rem;
+}
+
+.slides > img {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 1.5rem;
+}
+
+.slider__bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0 2rem;
+    justify-content: space-between;
+}
+
+.slider__texts-wrapper {
+    width: 100%;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.slider__texts-container {
+    display: flex;
+    max-width: 100%;
+    transform: translateX(0);
+    transition: all 1.2s ease-out;
+}
+
+.slider__text {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.slider__controls {
+    display: flex;
+    align-items: center;
+}
+
+.slider__control {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+}
+
+label:hover span {
+    background-color: #fbdf06;
+    border-color: #e38d05;
+}
+
+label:active span {
+    background-color: #d4a30e;
+    border-color: #aa3a0d;
+}
+
+span {
+    display: block;
+    width: 1.1rem;
+    height: 1.1rem;
+    background-color: #771b0a;
+    border: 0.15rem solid transparent;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+/*CHANGE PICS*/
+
+input[id="slide1"]:checked ~ .slider__memes > .slider__memes-wrapper {
+    transform: translateX(0);
+}
+input[id="slide2"]:checked ~ .slider__memes > .slider__memes-wrapper {
+    transform: translateX(-100%);
+}
+input[id="slide3"]:checked ~ .slider__memes > .slider__memes-wrapper {
+    transform: translateX(-200%);
+}
+input[id="slide4"]:checked ~ .slider__memes > .slider__memes-wrapper {
+    transform: translateX(-300%);
+}
+input[id="slide5"]:checked ~ .slider__memes > .slider__memes-wrapper {
+    transform: translateX(-400%);
+}
+
+/*CHANGE TEXTS*/
+
+input[id="slide1"]:checked
+    ~ .slider__bottom
+    > .slider__texts-wrapper
+    > .slider__texts-container {
+    transform: translateX(0);
+}
+input[id="slide2"]:checked
+    ~ .slider__bottom
+    > .slider__texts-wrapper
+    > .slider__texts-container {
+    transform: translateX(-100%);
+}
+input[id="slide3"]:checked
+    ~ .slider__bottom
+    > .slider__texts-wrapper
+    > .slider__texts-container {
+    transform: translateX(-200%);
+}
+input[id="slide4"]:checked
+    ~ .slider__bottom
+    > .slider__texts-wrapper
+    > .slider__texts-container {
+    transform: translateX(-300%);
+}
+input[id="slide5"]:checked
+    ~ .slider__bottom
+    > .slider__texts-wrapper
+    > .slider__texts-container {
+    transform: translateX(-400%);
+}
+
+/*CHECKED ACTIVE STYLES*/
+
+input[id="slide1"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide1"]
+    > span {
+    background-color: transparent;
+    border-color: red;
+}
+input[id="slide2"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide2"]
+    > span {
+    background-color: transparent;
+    border-color: red;
+}
+input[id="slide3"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide3"]
+    > span {
+    background-color: transparent;
+    border-color: red;
+}
+input[id="slide4"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide4"]
+    > span {
+    background-color: transparent;
+    border-color: red;
+}
+input[id="slide5"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide5"]
+    > span {
+    background-color: transparent;
+    border-color: red;
+}
+
+/*CHECKED HOVER STYLES*/
+
+input[id="slide1"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide1"]:hover
+    > span {
+    border-color: green;
+}
+input[id="slide2"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide2"]:hover
+    > span {
+    border-color: green;
+}
+input[id="slide3"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide3"]:hover
+    > span {
+    border-color: green;
+}
+input[id="slide4"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide4"]:hover
+    > span {
+    border-color: green;
+}
+input[id="slide5"]:checked
+    ~ .slider__bottom
+    > .slider__controls
+    label[for="slide5"]:hover
+    > span {
+    border-color: green;
 }
